@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="A resume site for Lone Wolf Programming">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Yevgeniy Pinskiy</title>
+	<style>
+		body {
+			padding: 5px;
+			background-color: #C0C0C0;
+			position: relative;
+			font-size: 115%;
+			background-image: url("/assets/seigaiha.png");
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		#profile-pic {
+			display: block;
+			margin: 0 auto;
+			border-radius: 10px;
+			width: 25%;
+		}
+
+		#header {
+			text-align: center;
+			margin-bottom: 10px;
+			font-size: 150%;
+		}
+
+		.container {
+			width: 70%;
+			margin: 0 auto;
+		}
+
+		.card {
+			background-color: #f8f8ff;
+			padding: 2%;
+			border-radius: 10px;
+			border: 1px solid lightgrey;
+		}
+
+		.card>p {
+			text-indent: 20px;
+			margin-bottom: 10px;
+		}
+
+		.menu>a {
+			text-decoration: none;
+			border: 1px solid black;
+			border-radius: 10px;
+			color: black;
+			padding: 10px;
+			white-space: nowrap;
+			transition: background-color 0.5s ease;
+		}
+
+		.bigger {
+			width: 100%;
+		}
+
+		.menu>a:not(:last-child) {
+			margin-right: 46px;
+		}
+
+		@media only screen and (max-width: 768px) {
+			.card {
+				padding: 3%;
+			}
+			.container {
+				width: 95%;
+			}
+			.image-left {
+				width: 90%;
+			}
+			.image-right {
+				width: 90%;
+			}
+			.menu>a {
+				margin-bottom: 2px;
+				display: block;
+				margin-right: 0px !important;
+				text-align: center;
+				padding: 5px;
+			}
+			.menu {
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+			#profile-pic {
+				width: 95%;
+			}
+		}
+
+		@media only screen and (min-width: 768px) and (max-width: 1055px) {
+			.menu>a {
+				display: inline-block;
+				margin-bottom: 5px;
+			}
+			.menu {
+				padding-top: 5px;
+				padding-bottom: 0px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<img id="profile-pic" src="assets/profile-HD.jpg" alt="Profile Picture" srcset="assets/profile.jpg 768w, assets/profile-HD.jpg 2x">
+		<div id="header">
+			<h1>Yevgeniy Pinskiy</h1>
+		</div>
+		<div class="menu card">
+			<a href="#about">About Me</a>
+			<a href="#gbfraiders">GBF Raiders</a>
+			<a href="#projects">Other Projects</a>
+			<a href="#work">Work Experience</a>
+			<a href="#contactme">Contact Me</a>
+		</div>
+		<div id="about">
+			<h1>About Me</h1>
+			<div class="card">
+				<p>Hi! I am Yevgeniy Pinskiy and I am located in Brooklyn, NY. My primary languages and skills include vanilla Javascript, HTML, CSS, Node.js/Express, and MongoDB. I also have experience in C#, C, C++, SQLite, and Xamarin.Android (Pre-Xamarin Forms).
+					I like spending time to have creative discussions on what the best solution is and I like to use research to back up my points instead of just going off my opinion. I am a quick learner and enjoy trying on new techniques, frameworks, or what have
+					you. I am self taught and have learned all of my programming skill on my own. My hobbies include working with various embedded tech such as Raspberry Pis, Arduinos, Feathers, and Trinkets. My IDE of choice is Atom. Here is my <a href="https://www.linkedin.com/profile/in/yevgeniy-pinskiy-69aa8976">LinkedIn profile</a>,
+					my <a href="https://github.com/ypinskiy">Github profile</a>, and my <a href="https://stackoverflow.com/users/2522121/gpinskiy?tab=profile">StackOverflow profile</a>.</p>
+			</div>
+		</div>
+		<div id="gbfraiders">
+			<h1>GBF Raiders</h1>
+			<div class="card">
+				<img class="bigger" src="assets/gbfraiders.png"></img>
+				<p>One of my main projects these days is a website called GBF Raiders. It is a tool designed for players of the game <a href="http://game.granbluefantasy.jp/">Grand Blue Fantasy</a>, a cross-platform game popular in both Japan and America. This site
+					allows players to subscribe to and find "Raids" (player-made rooms that other players can join if they meet certain requirements). The back-end is comprised of an Express server, Socket.io, and the Twitter streaming API. The front end is styled primarily
+					with Semantic UI and is mostly vanilla Javascript besides the few jQuery calls that Semantic UI components require. The Twitter stream filters out all the raids that are defined in a JSON file and emits them to Socket.io rooms. Players can then subscribe
+					or unsubscribe from those rooms to control which show up in the site. Selected raids are saved in localstorage to survive refreshes. If the server or socket goes down, the site automatically re-subscribes to those rooms on reconnect. I have several
+					hundred users a day and pay for the DigitalOcean server with donations. The site is hosted at <a href="http://www.gbfraiders.com/">GBFRaiders.com</a> and it's <a href="https://github.com/ypinskiy/GBF-Raiders">GitHub</a> is public.</p>
+				<p>I have also made a companion Chrome extension for this site, available at <a href="https://chrome.google.com/webstore/detail/gbf-raiders-2-the-chrome/jhdcbkpphfaclidacgbnnaphoilhgipm">the Chrome webstore</a> and the code is visible on <a href="https://github.com/ypinskiy/GBF-Raiders-Extension">GitHub</a></p>
+			</div>
+		</div>
+		<div id="projects">
+			<h1>Projects</h1>
+			<div class="card">
+				<ul class="list">
+					<li id="kashtangifts">
+						<a href="http://www.kashtangifts.com"><img class="image-left" alt="Screenshot of Kashtan Gifts" src="assets/kashtangifts-HD.png" srcset="assets/kashtangifts.png 768w, assets/kashtangifts-HD.png 2x"></a>
+						<div>
+							<h3><a href="http://www.kashtangifts.com">Kashtan Gifts</a></h3> This is a beta website that I made from scratch for a freelance client of mine. It is a shopping website similar to Etsy but specifically for her products. The backend is a Node.js server running the Express framework and HTML templating done
+							in EJS. The mailing of order forms and such is handled by the Mailgun API and credit card handling goes through Stripe. On the front end, it is just a simple Bootstrap implementation. This is all hosted for now on Heroku before being moved to its
+							own dedicated server in the next major update in March 2018. <a href="http://www.kashtangifts.com">Here is a link to the beta site.</a>
+						</div>
+					</li>
+					<li id="tempdashboard">
+						<img class="image-right" alt="Screenshot of Forecast Dashboard" src="assets/forecastdashboard-HD.png" srcset="assets/forecastdashboard.png 768w, assets/forecastdashboard-HD.png 2x">
+						<div>
+							<h3>Temperature Sensors + Dashboard</h3> As a part of an effort to incorporate more home automation into my house, I built a few temperature sensors using an ESP8266 Feather and a DHT22 and then placed them around the house including one outside. I then created a Node.js server that
+							would collect the reading from these remote sensors and store them as well as get the week's forecast and a feed from our security camera. It exposed a local dashboard that I set as the homepage on a bunch of tablets around the house. I am running
+							the server on a Raspberry Pi 3 that I made some custom case work for to increase cooling capabilites.
+						</div>
+					</li>
+					<li id="lamprelay">
+						<div>
+							<h3>Lamp Relay Switch</h3> The next part of my home automation project was a relay that was connected to an ESP8266. It exposed a local server that responded to the "/on" and "/off" urls. I then had a Windows Batch file that would turn on the light at the same time every
+							day (around sunset) and turn the light off at the same time as well (around 2 AM). This was eventually replaced with a motion sensor that turns the light to full power when movement is sensed and dims the light when nobody is near.
+						</div>
+					</li>
+					<li id="sprinklers">
+						<div>
+							<h3>IoT Sprinkler System</h3> The third step in the home automation project was designed when the family was about to go on vacation and we did not have anyone to water our garden. Thus, a timed sprinkler system was made. At the same time every day, a batch file would turn
+							on the sprinkler for 5 minutes and then shut it off. A failsafe was built in to the sprinkler that would turn off the sprinkler after 10 mins of use if the shut off was not recieved by then. A local server was exposed that would allow us to see
+							the last time the sprinkler was active.
+						</div>
+					</li>
+					<li id="breakout">
+						<a href="https://canvasgamesdemo.herokuapp.com/sites/breakout/index.html"><img class="image-left" alt="Screenshot of Breakout Game" src="assets/breakout-HD.png" srcset="assets/breakout.png 768w, assets/breakout-HD.png 2x"></a>
+						<div>
+							<h3><a href="https://canvasgamesdemo.herokuapp.com/sites/breakout/index.html">Classic Breakout Game Done in Canvas</a></h3> While I was learning Javascript, I created a series of games implemented in the HTML Canvas element. This game was created from a Mozilla Developer Network tutorial that I finished and then decided to expand with new assets and sounds. Here is
+							a link to a <a href="https://canvasgamesdemo.herokuapp.com/sites/breakout/index.html">demo of the game</a> and a link to the <a href="https://github.com/ypinskiy/CanvasExamples/tree/master/breakout">Github source</a> for it.
+						</div>
+					</li>
+					<li id="match3">
+						<a href="https://canvasgamesdemo.herokuapp.com/sites/match_3/match.html"><img class="image-right" alt="Screenshot of Match 3 Game" src="assets/match3-HD.png" srcset="assets/match3.png 768w, assets/match3-HD.png 2x"></a>
+						<div>
+							<h3><a href="https://canvasgamesdemo.herokuapp.com/sites/match_3/match.html">Match-3 Puzzle Game Done in Canvas</a></h3> The next Canvas game I worked on was a match 3 puzzle game that I was inspired to make after my mother and sister got onto the Candy Crush fad. I created a few utility classes for this like the Grid class that I still use for the games I am working
+							on now. Here is a link to a <a href="https://canvasgamesdemo.herokuapp.com/sites/match_3/match.html">demo of the game</a> and a link to the <a href="https://github.com/ypinskiy/CanvasExamples/tree/master/match_3">Github source</a> for it.
+						</div>
+					</li>
+					<li id="turretdefense">
+						<a href="https://canvasgamesdemo.herokuapp.com/sites/turret_defense/turret.html"><img class="image-left" alt="Screenshot of Turret Defense Game" src="assets/turretdefense-HD.png" srcset="assets/turretdefense.png 768w, assets/turretdefense-HD.png 2x"></a>
+						<div>
+							<h3><a href="https://canvasgamesdemo.herokuapp.com/sites/turret_defense/turret.html">Turret Defense Game Done in Canvas</a></h3> This was the first big/full game that I tried to make, as well as the one that took the longest to make. I learned quite a few techniques on this project such as pathfinding and making sprites rotate to face points. Here is a link to a <a href="https://canvasgamesdemo.herokuapp.com/sites/turret_defense/turret.html">demo of the game</a>							and a link to the <a href="https://github.com/ypinskiy/CanvasExamples/tree/master/turret_defense">Github source</a> for it.
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="work">
+			<h1>Work Experience</h1>
+			<div class="card">
+				<p>
+					<h3>JUNIOR DEVELOPER | AFS TECHNOLOGIES | 2014 - 2016</h3><br> My main duties as a junior developer was to maintain and add features to a DSD ("Direct Store Delivery") mobile app for bakery drivers that was on iOS, Android, and Windows Mobile 5. The shared codebase was accomplished using Xamarin.Android
+					and Xamarin.iOS. The coding language was primarily C#. Maintince work was just simple bugs that customer would report to us and then assigned to developers to fix. Features that were added could be as simple as a new SQLite db field or a new screen
+					in the application to show some specific data that that customer wanted to see but could be as complicated as the fingerprint functionality that I added which involved finding a proper library and intergrating it. Other features I added was a face
+					login feature using facial recognition/a db of approved drivers' faces and a panic button feature in event of a robbery. The tools I used for all of my work here was Visual Studio 11 as the IDE, SourceGear Vault as the source control, and Autotask
+					as the ticketing/time management system.
+					<br>
+					<br>
+					<h3>INTERN | AFS TECHNOLOGIES | 2013</h3><br> One of the projects that I worked on as an intern was a website that would recieve gps data from trucks and display the location and truck stock on a map, to be intergrated with another dashboard. The server was written in C# using ASP.NET and
+					the frontend was made with Angular 1 (we were experimenting with it to see if we would use it company-wide) as well as the Google Maps API for the map part. We used MongoDB as the database. Another experimental project I worked on for AFS was a app
+					for the Google Glass that would connect to a database and retrieve information about about a product whose barcode was scanned by the Glass after a hotword was said ("Glass, scan product."). This was written in C# using the Google Glass Development
+					Kit and Xamarin.Android.
+				</p>
+			</div>
+		</div>
+		<div id="contactme">
+			<h1>Contact Me</h1>
+			<div class="card">
+				<p>I am currently looking for work in the web development or full stack positions. Send me an email at <a href="mailto:gene@ypinskiy.com">gene@ypinskiy.com</a> to discuss any of my projects and <a href="mailto:jobs@ypinskiy.com">jobs@ypinskiy.com</a>					to commission my work or to discuss job opportunities. Thank you for giving me a chance to work with all of you!</p>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/ga-lite/latest/ga-lite.min.js" async></script>
+	<script>
+		var galite = galite || {};
+		galite.UA = 'UA-48921108-2';
+	</script>
+	<noscript id="deferred-styles">
+		<link href="page.css" type="text/css" rel="stylesheet">
+	</noscript>
+	<script>
+		var loadDeferredStyles = function() {
+			var addStylesNode = document.getElementById("deferred-styles");
+			var replacement = document.createElement("div");
+			replacement.innerHTML = addStylesNode.textContent;
+			document.body.appendChild(replacement)
+			addStylesNode.parentElement.removeChild(addStylesNode);
+		};
+		var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+			webkitRequestAnimationFrame || msRequestAnimationFrame;
+		if (raf) raf(function() {
+			window.setTimeout(loadDeferredStyles, 0);
+		});
+		else window.addEventListener('load', loadDeferredStyles);
+	</script>
+</body>
+
+</html>
