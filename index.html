@@ -93,7 +93,7 @@
 		}
 
 		.card>p {
-			text-indent: 20px;
+			text-align: justify;
 			margin-bottom: 10px;
 		}
 
@@ -116,7 +116,7 @@
 			-webkit-padding-start: 0px;
 		}
 
-		.links-list > li {
+		.links-list>li {
 			padding: 5px;
 		}
 
@@ -186,9 +186,9 @@
 		<div id="about">
 			<h1>About Me</h1>
 			<div class="card">
-				<p>Hi! I am Yevgeniy Pinskiy and I am located in Brooklyn, NY. My primary languages and skills include vanilla Javascript, HTML, CSS, Node.js/Express, and MongoDB. I also have experience in C#, C, C++, SQLite, and Xamarin.Android (Pre-Xamarin Forms).
-					I like spending time to have creative discussions on what the best solution is and I like to use research to back up my points instead of just going off my opinion. I am a quick learner and enjoy trying on new techniques, frameworks, or what have
-					you. I am self taught and have learned all of my programming skill on my own. My hobbies include working with various embedded tech such as Raspberry Pis, Arduinos, Feathers, and Trinkets. My IDE of choice is Atom.</p>
+				<p>My primary languages and skills include Javascript, HTML, CSS, Node.js/Express, and MongoDB. I also have experience in C#, C++, SQLite, and Xamarin.Android (Pre-Xamarin Forms). I like spending time to have creative discussions on what the best solution
+					is and I like to use research to back up my points instead of just going off my opinion. I am a quick learner and enjoy trying on new techniques, frameworks, or libraries. My hobbies include working with various embedded tech such as Raspberry Pis,
+					Arduinos, Feathers, and Trinkets. My IDE of choice is Atom.</p>
 			</div>
 		</div>
 		<div id="gbfraiders">
@@ -197,9 +197,9 @@
 				<img class="bigger" src="assets/gbfraiders.png"></img>
 				<p>One of my main projects these days is a website called GBF Raiders. It is a tool designed for players of the game <a href="http://game.granbluefantasy.jp/">Grand Blue Fantasy</a>, a cross-platform game popular in both Japan and America. This site
 					allows players to subscribe to and find "Raids" (player-made rooms that other players can join if they meet certain requirements). The back-end is comprised of an Express server, Socket.io, and the Twitter streaming API. The front end is styled primarily
-					with Semantic UI and is mostly vanilla Javascript besides the few jQuery calls that Semantic UI components require. The Twitter stream filters out all the raids that are defined in a JSON file and emits them to Socket.io rooms. Players can then subscribe
-					or unsubscribe from those rooms to control which show up in the site. Selected raids are saved in localstorage to survive refreshes. If the server or socket goes down, the site automatically re-subscribes to those rooms on reconnect. I have several
-					hundred users a day and pay for the DigitalOcean server with donations. The site is hosted at <a href="http://www.gbfraiders.com/">GBFRaiders.com</a> and it's <a href="https://github.com/ypinskiy/GBF-Raiders">GitHub</a> is public.</p>
+					with Semantic UI and is mostly standard Javascript besides the few jQuery calls that Semantic UI components require. The Twitter stream filters out all the raids that are defined in a JSON file and emits them to Socket.io rooms. Players can then
+					subscribe or unsubscribe from those rooms to control which show up in the site. Selected raids are saved in localstorage to survive refreshes. If the server or socket goes down, the site automatically re-subscribes to those rooms on reconnect. I
+					have several hundred users a day and pay for the DigitalOcean server with donations. The site is hosted at <a href="http://www.gbfraiders.com/">GBFRaiders.com</a> and it's <a href="https://github.com/ypinskiy/GBF-Raiders">GitHub</a> is public.</p>
 				<p>I have also made a companion Chrome extension for this site, available at <a href="https://chrome.google.com/webstore/detail/gbf-raiders-2-the-chrome/jhdcbkpphfaclidacgbnnaphoilhgipm">the Chrome webstore</a> and the code is visible on <a href="https://github.com/ypinskiy/GBF-Raiders-Extension">GitHub</a></p>
 			</div>
 		</div>
@@ -211,8 +211,8 @@
 						<a href="http://www.kashtangifts.com"><img class="image-left" alt="Screenshot of Kashtan Gifts" src="assets/kashtangifts.png"></a>
 						<div>
 							<h3><a href="http://www.kashtangifts.com">Kashtan Gifts</a></h3> This is a beta website that I made from scratch for a freelance client of mine. It is a shopping website similar to Etsy but specifically for her products. The backend is a Node.js server running the Express framework and HTML templating done
-							in EJS. The mailing of order forms and such is handled by the Mailgun API and credit card handling goes through Stripe. On the front end, it is just a simple Bootstrap implementation. This is all hosted for now on Heroku before being moved to its
-							own dedicated server in the next major update in March 2018. <a href="http://www.kashtangifts.com">Here is a link to the beta site.</a>
+							in EJS. The mailing of order forms and such is handled by the Mailgun API and credit card handling goes through Stripe. On the front end, it is just a simple Bootstrap implementation. This is hosted for now on Heroku before being moved to its own
+							dedicated server in the next major update in March 2018. <a href="http://www.kashtangifts.com">Here is a link to the beta site.</a>
 						</div>
 					</li>
 					<li id="tempdashboard">
@@ -263,6 +263,9 @@
 			<h1>Work Experience</h1>
 			<div class="card">
 				<p>
+					<h3>CURRENTLY ENROLLED AT KINGSBOROUGH COMUNITY COLLEGE</h3> I left my previous employer to get my degree. I am now enrolled at KBCC to get an Associate degree in Computer Science. I will be continuing to a Bachelors degree right after if I have not started any major projects at that point.
+					<br>
+					<br>
 					<h3>JUNIOR DEVELOPER | AFS TECHNOLOGIES | 2014 - 2016</h3><br> My main duties as a junior developer was to maintain and add features to a DSD ("Direct Store Delivery") mobile app for bakery drivers that was on iOS, Android, and Windows Mobile 5. The shared codebase was accomplished using Xamarin.Android
 					and Xamarin.iOS. The coding language was primarily C#. Maintince work was just simple bugs that customer would report to us and then assigned to developers to fix. Features that were added could be as simple as a new SQLite db field or a new screen
 					in the application to show some specific data that that customer wanted to see but could be as complicated as the fingerprint functionality that I added which involved finding a proper library and intergrating it. Other features I added was a face
