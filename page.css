@@ -34,6 +34,17 @@
 	align-items: flex-start;
 }
 
+.menu>a {
+	text-decoration: none;
+	border: 1px solid black;
+	border-radius: 10px;
+	color: black;
+	padding: 10px;
+	white-space: nowrap;
+	transition: background-color 0.5s ease;
+	text-align: center;
+}
+
 .menu>a:hover {
 	background-color: lightgray;
 }
@@ -75,17 +86,6 @@ body {
 .card>p {
 	text-indent: 20px;
 	margin-bottom: 10px;
-}
-
-.menu>a {
-	text-decoration: none;
-	border: 1px solid black;
-	border-radius: 10px;
-	color: black;
-	padding: 10px;
-	white-space: nowrap;
-	transition: background-color 0.5s ease;
-	text-align: center;
 }
 
 .bigger {

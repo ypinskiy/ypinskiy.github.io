@@ -3,31 +3,192 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="A resume site for Lone Wolf Programming">
+	<meta name="description" content="A resume site for Yevgeniy Pinskiy">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Yevgeniy Pinskiy</title>
+	<style>
+		.list {
+			list-style: none;
+			padding-left: 0;
+		}
+
+		.list>li {
+			margin-bottom: 10px;
+			overflow: auto;
+		}
+
+		.image-left {
+			margin-right: 10px;
+			float: left;
+			width: 20%;
+			margin-bottom: 10px;
+		}
+
+		.image-right {
+			float: right;
+			margin-left: 10px;
+			width: 20%;
+		}
+
+		.menu {
+			padding: 10px !important;
+			position: sticky;
+			top: 0px;
+			z-index: 50;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+			align-content: space-between;
+			align-items: flex-start;
+		}
+
+		.menu>a {
+			text-decoration: none;
+			border: 1px solid black;
+			border-radius: 10px;
+			color: black;
+			padding: 10px;
+			white-space: nowrap;
+			transition: background-color 0.5s ease;
+			text-align: center;
+		}
+
+		.menu>a:hover {
+			background-color: lightgray;
+		}
+
+		body {
+			padding: 5px;
+			background-color: #C0C0C0;
+			position: relative;
+			font-size: 115%;
+			background-image: url("assets/seigaiha.png");
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		#profile-pic {
+			display: block;
+			margin: 0 auto;
+			border-radius: 10px;
+			width: 25%;
+		}
+
+		#header {
+			text-align: center;
+			margin-bottom: 10px;
+			font-size: 150%;
+		}
+
+		.container {
+			width: 70%;
+			margin: 0 auto;
+		}
+
+		.card {
+			background-color: #f8f8ff;
+			padding: 2%;
+			border-radius: 10px;
+			border: 1px solid lightgrey;
+		}
+
+		.card>p {
+			text-indent: 20px;
+			margin-bottom: 10px;
+		}
+
+		.bigger {
+			width: 50%;
+			margin-left: 25%;
+		}
+
+		.links-list {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-content: space-between;
+			align-items: flex-start;
+			text-align: center;
+			list-style: none;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			-webkit-padding-start: 0px;
+		}
+
+		.links-list > li {
+			padding: 5px;
+		}
+
+		.links-list>li>i {
+			margin-right: 10px;
+		}
+
+		@media (max-width: 880px) {
+			.card {
+				padding: 3%;
+			}
+			.container {
+				width: 95%;
+			}
+			.image-left {
+				width: 90%;
+			}
+			.image-right {
+				width: 90%;
+			}
+			.menu>a {
+				margin-bottom: 2px;
+				display: block;
+				margin-right: 0px !important;
+				text-align: center;
+				padding: 5px;
+			}
+			.menu {
+				flex-wrap: wrap;
+				font-size: small;
+			}
+			#profile-pic {
+				width: 95%;
+			}
+		}
+	</style>
+	<script src="https://use.fontawesome.com/3da23e74b7.js"></script>
 </head>
 
 <body>
 	<div class="container">
-		<img id="profile-pic" src="assets/profile-HD.jpg" alt="Profile Picture" srcset="assets/profile.jpg 768w, assets/profile-HD.jpg 2x">
+		<img id="profile-pic" src="assets/profile.jpg" alt="Profile Picture">
 		<div id="header">
 			<h1>Yevgeniy Pinskiy</h1>
+			<h5>Brooklyn, New York, USA</h5>
 		</div>
 		<div class="menu card">
+			<a href="#links">My Links</a>
 			<a href="#about">About Me</a>
 			<a href="#gbfraiders">GBF Raiders</a>
 			<a href="#projects">Other Projects</a>
 			<a href="#work">Work Experience</a>
-			<a href="#contactme">Contact Me</a>
+		</div>
+		<div id="links">
+			<h1>My Links</h1>
+			<div class="card">
+				<ul class="links-list">
+					<li><i class="fa fa-github"></i><a href="https://github.com/ypinskiy/">Github</a></li>
+					<li><i class="fa fa-stack-overflow"></i><a href="https://stackoverflow.com/users/2522121/gpinskiy">StackOverflow</a></li>
+					<li><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/in/yevgeniy-pinskiy-69aa8976/">Linkedin</a></li>
+					<li><i class="fa fa-codepen"></i><a href="https://codepen.io/ypinskiy/">Codepen</a></li>
+					<li><i class="fa fa-envelope"></i><a href="mailto:gene@pinskiy.us">Email Me</a></li>
+					<li><i class="fa fa-file-word-o"></i><a href="assets/YevgeniyPinskiyResume.docx" download="YevgeniyPinskiyResume.docx">Download My Resume</a></li>
+				</ul>
+			</div>
 		</div>
 		<div id="about">
 			<h1>About Me</h1>
 			<div class="card">
 				<p>Hi! I am Yevgeniy Pinskiy and I am located in Brooklyn, NY. My primary languages and skills include vanilla Javascript, HTML, CSS, Node.js/Express, and MongoDB. I also have experience in C#, C, C++, SQLite, and Xamarin.Android (Pre-Xamarin Forms).
 					I like spending time to have creative discussions on what the best solution is and I like to use research to back up my points instead of just going off my opinion. I am a quick learner and enjoy trying on new techniques, frameworks, or what have
-					you. I am self taught and have learned all of my programming skill on my own. My hobbies include working with various embedded tech such as Raspberry Pis, Arduinos, Feathers, and Trinkets. My IDE of choice is Atom. Here is my <a href="https://www.linkedin.com/profile/in/yevgeniy-pinskiy-69aa8976">LinkedIn profile</a>,
-					my <a href="https://github.com/ypinskiy">Github profile</a>, and my <a href="https://stackoverflow.com/users/2522121/gpinskiy?tab=profile">StackOverflow profile</a>.</p>
+					you. I am self taught and have learned all of my programming skill on my own. My hobbies include working with various embedded tech such as Raspberry Pis, Arduinos, Feathers, and Trinkets. My IDE of choice is Atom.</p>
 			</div>
 		</div>
 		<div id="gbfraiders">
@@ -47,7 +208,7 @@
 			<div class="card">
 				<ul class="list">
 					<li id="kashtangifts">
-						<a href="http://www.kashtangifts.com"><img class="image-left" alt="Screenshot of Kashtan Gifts" src="assets/kashtangifts-HD.png" srcset="assets/kashtangifts.png 768w, assets/kashtangifts-HD.png 2x"></a>
+						<a href="http://www.kashtangifts.com"><img class="image-left" alt="Screenshot of Kashtan Gifts" src="assets/kashtangifts.png"></a>
 						<div>
 							<h3><a href="http://www.kashtangifts.com">Kashtan Gifts</a></h3> This is a beta website that I made from scratch for a freelance client of mine. It is a shopping website similar to Etsy but specifically for her products. The backend is a Node.js server running the Express framework and HTML templating done
 							in EJS. The mailing of order forms and such is handled by the Mailgun API and credit card handling goes through Stripe. On the front end, it is just a simple Bootstrap implementation. This is all hosted for now on Heroku before being moved to its
@@ -55,7 +216,7 @@
 						</div>
 					</li>
 					<li id="tempdashboard">
-						<img class="image-right" alt="Screenshot of Forecast Dashboard" src="assets/forecastdashboard-HD.png" srcset="assets/forecastdashboard.png 768w, assets/forecastdashboard-HD.png 2x">
+						<img class="image-right" alt="Screenshot of Forecast Dashboard" src="assets/forecastdashboard.png">
 						<div>
 							<h3>Temperature Sensors + Dashboard</h3> As a part of an effort to incorporate more home automation into my house, I built a few temperature sensors using an ESP8266 Feather and a DHT22 and then placed them around the house including one outside. I then created a Node.js server that
 							would collect the reading from these remote sensors and store them as well as get the week's forecast and a feed from our security camera. It exposed a local dashboard that I set as the homepage on a bunch of tablets around the house. I am running
@@ -76,21 +237,21 @@
 						</div>
 					</li>
 					<li id="breakout">
-						<a href="https://canvasgamesdemo.herokuapp.com/sites/breakout/index.html"><img class="image-left" alt="Screenshot of Breakout Game" src="assets/breakout-HD.png" srcset="assets/breakout.png 768w, assets/breakout-HD.png 2x"></a>
+						<a href="https://canvasgamesdemo.herokuapp.com/sites/breakout/index.html"><img class="image-left" alt="Screenshot of Breakout Game" src="assets/breakout.png"></a>
 						<div>
 							<h3><a href="https://canvasgamesdemo.herokuapp.com/sites/breakout/index.html">Classic Breakout Game Done in Canvas</a></h3> While I was learning Javascript, I created a series of games implemented in the HTML Canvas element. This game was created from a Mozilla Developer Network tutorial that I finished and then decided to expand with new assets and sounds. Here is
 							a link to a <a href="https://canvasgamesdemo.herokuapp.com/sites/breakout/index.html">demo of the game</a> and a link to the <a href="https://github.com/ypinskiy/CanvasExamples/tree/master/breakout">Github source</a> for it.
 						</div>
 					</li>
 					<li id="match3">
-						<a href="https://canvasgamesdemo.herokuapp.com/sites/match_3/match.html"><img class="image-right" alt="Screenshot of Match 3 Game" src="assets/match3-HD.png" srcset="assets/match3.png 768w, assets/match3-HD.png 2x"></a>
+						<a href="https://canvasgamesdemo.herokuapp.com/sites/match_3/match.html"><img class="image-right" alt="Screenshot of Match 3 Game" src="assets/match3.png"></a>
 						<div>
 							<h3><a href="https://canvasgamesdemo.herokuapp.com/sites/match_3/match.html">Match-3 Puzzle Game Done in Canvas</a></h3> The next Canvas game I worked on was a match 3 puzzle game that I was inspired to make after my mother and sister got onto the Candy Crush fad. I created a few utility classes for this like the Grid class that I still use for the games I am working
 							on now. Here is a link to a <a href="https://canvasgamesdemo.herokuapp.com/sites/match_3/match.html">demo of the game</a> and a link to the <a href="https://github.com/ypinskiy/CanvasExamples/tree/master/match_3">Github source</a> for it.
 						</div>
 					</li>
 					<li id="turretdefense">
-						<a href="https://canvasgamesdemo.herokuapp.com/sites/turret_defense/turret.html"><img class="image-left" alt="Screenshot of Turret Defense Game" src="assets/turretdefense-HD.png" srcset="assets/turretdefense.png 768w, assets/turretdefense-HD.png 2x"></a>
+						<a href="https://canvasgamesdemo.herokuapp.com/sites/turret_defense/turret.html"><img class="image-left" alt="Screenshot of Turret Defense Game" src="assets/turretdefense.png" ></a>
 						<div>
 							<h3><a href="https://canvasgamesdemo.herokuapp.com/sites/turret_defense/turret.html">Turret Defense Game Done in Canvas</a></h3> This was the first big/full game that I tried to make, as well as the one that took the longest to make. I learned quite a few techniques on this project such as pathfinding and making sprites rotate to face points. Here is a link to a <a href="https://canvasgamesdemo.herokuapp.com/sites/turret_defense/turret.html">demo of the game</a>							and a link to the <a href="https://github.com/ypinskiy/CanvasExamples/tree/master/turret_defense">Github source</a> for it.
 						</div>
@@ -116,36 +277,6 @@
 				</p>
 			</div>
 		</div>
-		<div id="contactme">
-			<h1>Contact Me</h1>
-			<div class="card">
-				<p>I am currently looking for work in the web development or full stack positions. Send me an email at <a href="mailto:gene@ypinskiy.com">gene@ypinskiy.com</a> to discuss any of my projects and <a href="mailto:jobs@ypinskiy.com">jobs@ypinskiy.com</a>					to commission my work or to discuss job opportunities. Thank you for giving me a chance to work with all of you!</p>
-			</div>
-		</div>
-	</div>
-	<script src="https://cdn.jsdelivr.net/ga-lite/latest/ga-lite.min.js" async></script>
-	<script>
-		var galite = galite || {};
-		galite.UA = 'UA-48921108-2';
-	</script>
-	<noscript id="deferred-styles">
-		<link href="page.css" type="text/css" rel="stylesheet">
-	</noscript>
-	<script>
-		var loadDeferredStyles = function() {
-			var addStylesNode = document.getElementById("deferred-styles");
-			var replacement = document.createElement("div");
-			replacement.innerHTML = addStylesNode.textContent;
-			document.body.appendChild(replacement)
-			addStylesNode.parentElement.removeChild(addStylesNode);
-		};
-		var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-			webkitRequestAnimationFrame || msRequestAnimationFrame;
-		if (raf) raf(function() {
-			window.setTimeout(loadDeferredStyles, 0);
-		});
-		else window.addEventListener('load', loadDeferredStyles);
-	</script>
 </body>
 
 </html>
