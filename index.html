@@ -6,7 +6,17 @@
 	<meta name="description" content="A resume site for Yevgeniy Pinskiy">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Yevgeniy Pinskiy</title>
-	<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.css">
+	<link rel="prefetch" as="style" onload="this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48921108-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-48921108-2');
+	</script>
 	<style>
 		body {
 			padding: 0px;
@@ -217,8 +227,7 @@
 			players to subscribe to and find "Raids" (player-made rooms that other players can join). The back-end is comprised of an Express server, Socket.io, and the Twitter streaming API. The front end is styled primarily with Semantic UI and is mostly standard
 			Javascript. The Twitter stream filters out all the raids that are defined in a JSON file and emits them to Socket.io rooms. Players can then subscribe or unsubscribe from those rooms to control which show up in the site. Selected raids are saved in
 			localstorage to survive refreshes. If the server or socket goes down, the site automatically re-subscribes to those rooms on reconnect. I have several thousand users a day and pay for the DigitalOcean server with donations. The site is hosted at
-			<a
-			 href="http://www.gbfraiders.com/">GBFRaiders.com</a> and it's <a href="https://github.com/ypinskiy/GBF-Raiders">GitHub</a> is public. Upon requests from my users, I have made a companion Chrome extension for this site, available at <a href="https://chrome.google.com/webstore/detail/gbf-raiders-2-the-chrome/jhdcbkpphfaclidacgbnnaphoilhgipm">the Chrome webstore</a>				and the code is also visible on <a href="https://github.com/ypinskiy/GBF-Raiders-Extension">GitHub</a>
+			<a href="http://www.gbfraiders.com/">GBFRaiders.com</a> and it's <a href="https://github.com/ypinskiy/GBF-Raiders">GitHub</a> is public. Upon requests from my users, I have made a companion Chrome extension for this site, available at <a href="https://chrome.google.com/webstore/detail/gbf-raiders-2-the-chrome/jhdcbkpphfaclidacgbnnaphoilhgipm">the Chrome webstore</a>			and the code is also visible on <a href="https://github.com/ypinskiy/GBF-Raiders-Extension">GitHub</a>
 		</div>
 		<h3 class="ui title header">Kashtan Gifts</h3>
 		<div class="ui justified container">
