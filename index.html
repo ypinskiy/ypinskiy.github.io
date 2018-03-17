@@ -3,9 +3,10 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="A resume site for Yevgeniy Pinskiy">
+	<meta name="description" content="A resume site for Yevgeniy Pinskiy, the front end developer that you need">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Yevgeniy Pinskiy</title>
+	<meta name="robots" content="NOODP">
 	<link rel="prefetch" as="style" onload="this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.css">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48921108-2"></script>
@@ -33,7 +34,7 @@
 			#projects {
 				padding: 5px !important;
 			}
-			#links {
+			.links {
 				grid-gap: 5px !important;
 				grid-template-columns: 1fr 1fr !important;
 				width: 90% !important;
@@ -124,12 +125,19 @@
 			border-bottom: 1px solid rgba(34, 36, 38, 0.15);
 		}
 
-		#links {
+		.links {
 			display: grid;
 			grid-gap: 10px;
 			grid-template-columns: 1fr 1fr 1fr;
 			width: 70%;
 			margin-left: 15%;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		.links.textless {
+			grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+			grid-auto-rows: max-content;
 		}
 
 		#career {
@@ -154,17 +162,19 @@
 			border-bottom: 1px solid white;
 		}
 
-		.title.header {
+		.ui.title.header {
 			font-variant: small-caps;
 			letter-spacing: 0.05rem;
 			text-decoration: underline;
+			text-align: center;
+			margin-bottom: 10px !important;
 		}
 	</style>
 </head>
 
 <body>
 	<div id="hero-container">
-		<img id="hero-img" alt="Hero Image Of Laptop" src="assets/hero-img-small.jpg">
+		<img id="hero-img" alt="Image Of Laptop" src="assets/hero-img-small.jpg">
 		<span id="hero-text">Yevgeniy Pinskiy</span>
 		<span id="hero-caption">The developer that you need</span>
 		<span id="scroll-prompt">Find out more about me</span>
@@ -173,19 +183,31 @@
 	<div id="about-me" class="ui container">
 		<h1 class="ui header">About Me</h1>
 		<div class="ui justified container">
+			<h3 class="ui title header">A Wide Range Of Experience</h3>
+			<div class="links textless">
+				<div><i class="html5 icon" aria-hidden="true"></i></div>
+				<div><i class="css3 icon" aria-hidden="true"></i></div>
+				<div><i class="js icon" aria-hidden="true"></i></div>
+				<div><i class="git icon" aria-hidden="true"></i></div>
+				<div><i class="node js icon" aria-hidden="true"></i></div>
+				<div><i class="vuejs icon" aria-hidden="true"></i></div>
+				<div><i class="python icon" aria-hidden="true"></i></div>
+			</div>
 			I am a jack of all trades developer, I can be whatever you need me to be. I pick up new languages and libraries as easily as I breathe. From C# and C++ to HTML, CSS, and Javascript, I am familiar with it. Specifically, I have experience in C#, .Net, SQL,
 			Java, Node.js, Express, and MongoDB.
 		</div>
 		<div class="ui justified container">
+			<h3 class="ui title header">Flexible To New Ideas</h3>
 			I love debating and discussing new techniques and features. I thrive on peoples' feedback. Researching runs through my veins. My ideal job would be where I would get a request for a new feature, research the options, develop several prototypes, and then
 			present those plus my research and opinions to the higher-ups.
 		</div>
 		<div class="ui justified container">
+			<h3 class="ui title header">What I Like</h3>
 			What else do you need to know about me? I am currently located in Brooklyn, NY and am attending college to earn a degree in Computer Science. My hobbies are baking and electronics. I tinker with Raspberry Pis and Arduinos, currently I am attempting to
 			make my house as smart as possible with mostly my own contraptions. I prefer tabs over spaces, Atom over Vim, Semantic UI over Bootstrap, braces over newlines, and rolling my own code over JQuery.
 		</div>
 		<h3 class="ui header">Links</h3>
-		<div id="links">
+		<div class="links">
 			<div>
 				<i class="github icon" aria-hidden="true"></i><a href="https://github.com/ypinskiy/">Github</a>
 			</div>
