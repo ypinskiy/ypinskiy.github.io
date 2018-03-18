@@ -3,15 +3,14 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="A resume site for Yevgeniy Pinskiy, the front end developer that you need">
+	<meta name="description" content="A resume site for Yevgeniy Pinskiy, the junior front end developer that you need">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Yevgeniy Pinskiy</title>
-	<meta name="robots" content="NOODP">
 	<link rel="prefetch" as="style" onload="this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.css">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48921108-2"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
+
 		function gtag() {
 			dataLayer.push(arguments);
 		}
@@ -22,30 +21,72 @@
 		body {
 			padding: 0px;
 			margin: 0px;
-			background-color: #252a30;
 		}
 
-		@media screen and (max-width: 600px) {
-			#hero-text {
-				top: 28% !important;
-			}
-			#about-me,
-			#career,
-			#projects {
-				padding: 5px !important;
-			}
-			.links {
-				grid-gap: 5px !important;
-				grid-template-columns: 1fr 1fr !important;
-				width: 90% !important;
-				margin-left: 0px !important;
-				margin-bottom: 5% !important;
-				align-items: center;
-				justify-items: center;
-			}
+		body>.ui.container {
+			width: 100%;
+			height: max-content;
+			padding-top: 5vh;
+			padding-bottom: 5vh;
+			text-align: center;
+		}
+
+		body>.ui.container>section {
+			margin-bottom: 3vh;
+		}
+
+		body>.ui.container .ui.justified.container {
+			width: 50rem;
+			font-size: 1.5em;
+		}
+
+		body>.ui.container .ui.justified.container p {
+			text-indent: 1em;
+			line-height: 1.8em;
+		}
+
+		body>.ui.container .ui.justified.container p:not(:first-child) {
+			margin-top: 2vh;
+		}
+
+		body>.ui.container .ui.justified.container a {
+			color: darkblue;
+			text-decoration: underline;
+		}
+
+		.ui.title.header {
+			font-variant: small-caps;
+			letter-spacing: 0.05rem;
+			text-decoration: underline;
+			margin-bottom: 1vh;
+			text-align: center;
+			margin-top: 3vh;
+		}
+
+		.tech-used {
+			-moz-column-count: 3;
+			-moz-column-gap: 20px;
+			-webkit-column-count: 3;
+			-webkit-column-gap: 20px;
+			column-count: 3;
+			column-gap: 20px;
+			width: 100%;
+		}
+
+		.tech-used>ul {
+			font-size: 0.7em;
+			margin: 0px;
+			list-style-position: inside;
+		}
+
+		img.screenshot {
+			width: 100%;
+			margin-top: 1vh;
+			border: 1px solid rgba(0, 0, 0, 0.3);
 		}
 
 		#hero-container {
+			background-color: #252a30;
 			height: 100vh;
 			position: relative;
 			width: 100%;
@@ -61,7 +102,7 @@
 			opacity: 0.3;
 		}
 
-		#hero-container>span {
+		#hero-container * {
 			text-align: center;
 			font-variant: small-caps;
 			color: white;
@@ -99,75 +140,60 @@
 
 		#about-me,
 		#projects {
-			margin-left: 0px !important;
-			width: 100% !important;
 			background-color: white;
+		}
+
+		#career,
+		#site-links {
+			background: url("assets/seigaiha.png");
+			border-top: 1px solid black;
+			border-bottom: 1px solid black;
+		}
+
+		#site-links {
+			padding: 5vh;
+			font-size: 1.5em;
+			line-height: 1.5em;
+			margin-left: 0px;
+			width: 100%;
 			height: max-content;
-			padding: 5%;
 			text-align: center;
 		}
 
-		#about-me>div,
-		#projects>div {
-			font-size: 1.5em;
-			line-height: 1.5em;
+		#site-links a {
+			color: black;
 		}
 
-		#about-me a,
-		#projects a {
-			color: black !important;
-		}
-
-		#about-me>.ui.justified.container:not(:last-child),
-		#projects>.ui.justified.container:not(:last-child) {
-			margin-bottom: 30px;
-			padding-bottom: 15px;
-			border-bottom: 1px solid rgba(34, 36, 38, 0.15);
-		}
-
-		.links {
+		#site-links>.links {
 			display: grid;
 			grid-gap: 10px;
 			grid-template-columns: 1fr 1fr 1fr;
-			width: 70%;
-			margin-left: 15%;
 			text-align: center;
-			margin-bottom: 10px;
+			width: 100%;
 		}
 
-		.links.textless {
-			grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-			grid-auto-rows: max-content;
-		}
-
-		#career {
-			height: max-content;
-			padding: 5%;
+		#icon-links {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			display: grid;
+			grid-gap: 10px;
+			grid-template-columns: repeat(8, 1fr);
 			text-align: center;
-			color: white;
+			width: 100%;
 		}
 
-		#career>.header {
-			color: white !important;
-		}
-
-		#career>div {
-			font-size: 1.5em;
-			line-height: 1.3em;
-		}
-
-		#career>.ui.justified.container:not(:last-child) {
-			margin-bottom: 30px;
-			padding-bottom: 15px;
-			border-bottom: 1px solid white;
-		}
-
-		.ui.title.header {
-			font-variant: small-caps;
-			letter-spacing: 0.05rem;
-			text-decoration: underline;
-			text-align: center;
-			margin-bottom: 10px !important;
+		@media screen and (max-width: 600px) {
+			#hero-text {
+				top: 28%;
+			}
+			.tech-used {
+				-moz-column-count: 1;
+				-webkit-column-count: 1;
+				column-count: 1;
+			}
+			#site-links>.links {
+				grid-template-columns: 1fr;
+			}
 		}
 	</style>
 </head>
@@ -175,16 +201,16 @@
 <body>
 	<div id="hero-container">
 		<img id="hero-img" alt="Image Of Laptop" src="assets/hero-img-small.jpg">
-		<span id="hero-text">Yevgeniy Pinskiy</span>
-		<span id="hero-caption">The developer that you need</span>
-		<span id="scroll-prompt">Find out more about me</span>
+		<h1 id="hero-text">Yevgeniy Pinskiy</h1>
+		<h2 id="hero-caption">The developer that you need</h2>
+		<h5 id="scroll-prompt">Find out more about me</h5>
 		<i id="chev-icon" class="chevron down icon"></i>
 	</div>
-	<div id="about-me" class="ui container">
+	<section id="about-me" class="ui container">
 		<h1 class="ui header">About Me</h1>
 		<div class="ui justified container">
-			<h3 class="ui title header">A Wide Range Of Experience</h3>
-			<div class="links textless">
+			<h2 class="ui title header">A Wide Range Of Experience</h2>
+			<div id="icon-links">
 				<div><i class="html5 icon" aria-hidden="true"></i></div>
 				<div><i class="css3 icon" aria-hidden="true"></i></div>
 				<div><i class="js icon" aria-hidden="true"></i></div>
@@ -192,21 +218,183 @@
 				<div><i class="node js icon" aria-hidden="true"></i></div>
 				<div><i class="vuejs icon" aria-hidden="true"></i></div>
 				<div><i class="python icon" aria-hidden="true"></i></div>
+				<div><i class="android icon" aria-hidden="true"></i></div>
 			</div>
-			I am a jack of all trades developer, I can be whatever you need me to be. I pick up new languages and libraries as easily as I breathe. From C# and C++ to HTML, CSS, and Javascript, I am familiar with it. Specifically, I have experience in C#, .Net, SQL,
-			Java, Node.js, Express, and MongoDB.
+			<p>I am a jack of all trades developer, I can be whatever you need me to be. I pick up new languages and libraries as easily as I breathe. From C# and C++ to HTML, CSS, and Javascript, I am familiar with it. Specifically, I have experience in C#, .Net,
+				SQL, Java, Node.js, Express, and MongoDB.</p>
 		</div>
 		<div class="ui justified container">
-			<h3 class="ui title header">Flexible To New Ideas</h3>
-			I love debating and discussing new techniques and features. I thrive on peoples' feedback. Researching runs through my veins. My ideal job would be where I would get a request for a new feature, research the options, develop several prototypes, and then
-			present those plus my research and opinions to the higher-ups.
+			<h2 class="ui title header">Flexible To New Ideas</h2>
+			<p>
+				I love debating and discussing new techniques and features. I thrive on peoples' feedback. Researching runs through my veins. My ideal job would be where I would get a request for a new feature, research the options, develop several prototypes, and then
+				present those plus my research and opinions to the higher-ups.
+				<p>
 		</div>
 		<div class="ui justified container">
-			<h3 class="ui title header">What I Like</h3>
-			What else do you need to know about me? I am currently located in Brooklyn, NY and am attending college to earn a degree in Computer Science. My hobbies are baking and electronics. I tinker with Raspberry Pis and Arduinos, currently I am attempting to
-			make my house as smart as possible with mostly my own contraptions. I prefer tabs over spaces, Atom over Vim, Semantic UI over Bootstrap, braces over newlines, and rolling my own code over JQuery.
+			<h2 class="ui title header">What I Like</h2>
+			<p>
+				Currently, I am looking for a junior Front End Developer position. What else do you need to know about me? I am at the moment located in Brooklyn, NY and am attending college to earn a degree in Computer Science. My hobbies are baking and electronics.
+				I tinker with Raspberry Pis and Arduinos, currently I am attempting to make my house as smart as possible with mostly my own contraptions. I prefer tabs over spaces, Atom over Vim, Semantic UI over Bootstrap, braces over newlines, and rolling my own
+				code over jQuery.
+			</p>
 		</div>
-		<h3 class="ui header">Links</h3>
+	</section>
+	<section id="career" class="ui container">
+		<h1 class="ui header">Formal Experience</h1>
+		<section>
+			<h2 class="ui title header">Junior Developer, AFS Technologies</h2>
+			<div class="ui justified container">
+				<div class="tech-used">
+					<h4>Technologies used:</h4>
+					<ul>
+						<li>Xamarin.Android</li>
+						<li>Xamarin.iOS</li>
+						<li>SQLite</li>
+						<li>C#</li>
+						<li>Java</li>
+					</ul>
+				</div>
+				<p>
+					This was my most current role. My main duties as a junior developer was to maintain and add features to a DSD ("Direct Store Delivery") mobile app for bakery drivers that was on iOS, Android, and Windows Mobile 5.
+				</p>
+				<p>
+					Maintenance work was just simple bugs that customer would report to us and then assigned to developers to fix. Features that were added could be as simple as a new SQLite DB field or a new screen in the application to show some specific data that that
+					customer wanted to see but could be as complicated as the fingerprint functionality that I added which involved finding a proper library and integrating it.
+				</p>
+				<p>
+					One of the other features I added were a face login feature using facial recognition and a DB of approved drivers' faces. Additionally, I also created a panic button feature in event of a robbery. I left this position to explore the world of front end
+					web development.
+				</p>
+				<p>
+					One of my favorite parts of this job was the prototyping. I would frequently get asked to research and then develop a prototype feature, sometimes in native Java, in order for the supervisors to test the feasibility of adding a similar feature to the
+					main app.
+				</p>
+			</div>
+		</section>
+		<section>
+			<h2 class="ui title header">Intern, AFS Technologies</h2>
+			<div class="ui justified container">
+				<div class="tech-used">
+					<h4>Technologies used:</h4>
+					<ul>
+						<li>Angular 1</li>
+						<li>ASP.NET</li>
+						<li>MongoDB</li>
+						<li>C#</li>
+						<li>Xamarin.Android</li>
+						<li>Javascript</li>
+						<li>Google Maps API</li>
+					</ul>
+				</div>
+				<p>
+					One of the projects that I worked on as an intern was a website that would receive GPS data from trucks and display the location and truck stock on a map, to be integrated within another dashboard. We were experimenting with Angular to see if we would
+					use it company-wide as well as seeing how easy it was to use Google Maps API for the map part.
+				</p>
+				<p>
+					Another experimental project I worked on for AFS was an app for the Google Glass that would connect to a database and retrieve information about a product whose barcode was scanned by the Glass after a keyword was said ("Glass, scan product."). This was
+					written in C# using the Google Glass Developer Kit and Xamarin.Android.
+				</p>
+			</div>
+		</section>
+	</section>
+	<section id="projects" class="ui container">
+		<h1 class="ui header">Informal Experience, Other Projects</h1>
+		<section>
+			<h2 class="ui title header">GBFRaiders</h2>
+			<div class="ui justified container">
+				<div class="tech-used">
+					<h4>Technologies used:</h4>
+					<ul>
+						<li>Semantic UI</li>
+						<li>Javascript</li>
+						<li>Node.js</li>
+						<li>Express</li>
+						<li>Socket.io</li>
+						<li>Git</li>
+						<li>Twitter streaming API</li>
+					</ul>
+				</div>
+				<img class="screenshot" src="assets/gbfraiders-home.png">
+				<p>
+					One of my main projects these days is a website called GBF Raiders. It is a tool designed for players of the game <a href="http://game.granbluefantasy.jp/">Gran Blue Fantasy</a>, a cross-platform game popular in both Japan and America. This site
+					allows players to subscribe to and find "Raids" (player-made rooms that other players can join).The Twitter stream filters out all the raids that are defined in a JSON file and emits them to Socket.io rooms. Players can then subscribe or unsubscribe
+					from those rooms to control which show up in the site. Selected raids are saved in localstorage to survive refreshes. If the server or socket goes down, the site automatically re-subscribes to those rooms on reconnect. I have several thousand users
+					a day and pay for the DigitalOcean server with donations.
+				</p>
+				<p>
+					The site is hosted at
+					<a href="http://www.gbfraiders.com/">GBFRaiders.com</a> and it's <a href="https://github.com/ypinskiy/GBF-Raiders">GitHub</a> is public. Upon requests from my users, I have made a companion Chrome extension for this site, available at <a href="https://chrome.google.com/webstore/detail/gbf-raiders-2-the-chrome/jhdcbkpphfaclidacgbnnaphoilhgipm">the Chrome webstore</a>					and the code is also visible on <a href="https://github.com/ypinskiy/GBF-Raiders-Extension">GitHub</a>.
+				</p>
+			</div>
+		</section>
+		<section>
+			<h2 class="ui title header">Kashtan Gifts</h2>
+			<div class="ui justified container">
+				<div class="tech-used">
+					<h4>Technologies used:</h4>
+					<ul>
+						<li>Bootstrap</li>
+						<li>Javascript</li>
+						<li>Node.js</li>
+						<li>Express</li>
+						<li>EJS</li>
+						<li>Git</li>
+						<li>Vue.js</li>
+						<li>Mailgun</li>
+						<li>Stripe</li>
+					</ul>
+				</div>
+				<img class="screenshot" src="assets/kashtangifts.png">
+				<p>
+					This is a beta website that I made for a freelance client of mine. It is a shopping website similar to Etsy but specifically for her products. This is hosted for now on Heroku before being moved to its own dedicated server in the next major update in
+					June 2018. The new site will be using Vue.js. <a href="http://www.kashtangifts.com">Here is a link to the placeholder site.</a>
+				</p>
+			</div>
+		</section>
+		<section>
+			<h2 class="ui title header">Temperature Dashboard</h2>
+			<div class="ui justified container">
+				<div class="tech-used">
+					<h4>Technologies used:</h4>
+					<ul>
+						<li>CSS Grid</li>
+						<li>Socket.io</li>
+						<li>Node.js</li>
+						<li>Express</li>
+						<li>C</li>
+					</ul>
+				</div>
+				<img class="screenshot" src="assets/forecastdashboard.png">
+				<p>
+					As a part of an effort to incorporate more home automation into my house, I built a few temperature sensors using an ESP8266 Feather and a DHT22 and then placed them around the house and one outside. I then created a Node.js server that would collect
+					the readings from these remote sensors and store them as well as get the week's forecast and a feed from our security camera. It exposed a local dashboard that I set as the homepage on a bunch of tablets around the house. I am running the server
+					on a Raspberry Pi 3 that I made some custom case work for to increase cooling capabilities.
+				</p>
+			</div>
+		</section>
+		<section>
+			<h2 class="ui title header">JS Canvas Games</h2>
+			<div class="ui justified container">
+				<img class="screenshot" src="assets/breakout.png">
+				<p>
+					While I was learning Javascript, I created a series of games implemented in the HTML Canvas element. One game, Breakout, was created from a Mozilla Developer Network tutorial that I finished and then decided to expand with new assets and sounds. Here
+					is a link to a <a href="https://canvasgamesdemo.herokuapp.com/sites/breakout/index.html">demo of the game</a> and a link to the <a href="https://github.com/ypinskiy/CanvasExamples/tree/master/breakout">Github source</a> for it.
+				</p>
+				<img class="screenshot" src="assets/match3.png">
+				<p>
+					The next canvas game I worked on was a match 3 puzzle game that I was inspired to make after my mother and sister got onto the Candy Crush fad. I created a few utility classes for this like the grid class that I still use for the games I am working on
+					now. Here is a link to a <a href="https://canvasgamesdemo.herokuapp.com/sites/match_3/match.html">demo of the game</a> and a link to the <a href="https://github.com/ypinskiy/CanvasExamples/tree/master/match_3">Github source</a> for it.
+				</p>
+				<img class="screenshot" src="assets/turretdefense.png">
+				<p>
+					The turret defense game was the first full game that I tried to make, as well as the one that took the longest to make. I learned quite a few techniques on this project such as pathfinding and making sprites rotate to face points. Here is a link to a
+					<a href="https://canvasgamesdemo.herokuapp.com/sites/turret_defense/turret.html">demo of the game</a> and a link to the <a href="https://github.com/ypinskiy/CanvasExamples/tree/master/turret_defense">Github source</a> for it.
+				</p>
+			</div>
+		</section>
+	</section>
+	<footer id="site-links">
+		<h2 class="ui header">Links</h2>
 		<div class="links">
 			<div>
 				<i class="github icon" aria-hidden="true"></i><a href="https://github.com/ypinskiy/">Github</a>
@@ -227,56 +415,7 @@
 				<i class="file word icon" aria-hidden="true"></i><a href="assets/YevgeniyPinskiyResume.docx" download="YevgeniyPinskiyResume.docx">Download My Resume</a>
 			</div>
 		</div>
-	</div>
-	<div id="career" class="ui container">
-		<h1 class="ui header">Formal Experience</h1>
-		<h3 class="ui title header">Junior Developer, AFS Technologies</h3>
-		<div class="ui justified container">
-			This was my most current role. My main duties as a junior developer was to maintain and add features to a DSD ("Direct Store Delivery") mobile app for bakery drivers that was on iOS, Android, and Windows Mobile 5. The shared codebase was accomplished
-			using Xamarin.Android and Xamarin.iOS. The coding language was primarily C#. Maintenance work was just simple bugs that customer would report to us and then assigned to developers to fix. Features that were added could be as simple as a new SQLite
-			DB field or a new screen in the application to show some specific data that that customer wanted to see but could be as complicated as the fingerprint functionality that I added which involved finding a proper library and integrating it. Other features
-			I added were a face login feature using facial recognition and a DB of approved drivers' faces and a panic button feature in event of a robbery. The tools I used for all of my work here was Visual Studio 11 as the IDE, SourceGear Vault as the source
-			control, and Autotask as the ticketing/time management system. I left this position to explore the world of front end web development.
-		</div>
-		<h3 class="ui title header">Intern, AFS Technologies</h3>
-		<div class="ui justified container">
-			One of the projects that I worked on as an intern was a website that would receive GPS data from trucks and display the location and truck stock on a map, to be integrated within another dashboard. The server was written in C# using ASP.NET and the frontend
-			was made with Angular 1. We were experimenting with Angular to see if we would use it company-wide as well as the Google Maps API for the map part. We used MongoDB as the database.
-			<br> Another experimental project I worked on for AFS was an app for the Google Glass that would connect to a database and retrieve information about a product whose barcode was scanned by the Glass after a keyword was said ("Glass, scan product.").
-			This was written in C# using the Google Glass Developer Kit and Xamarin.Android.
-		</div>
-	</div>
-	<div id="projects" class="ui container">
-		<h1 class="ui header">Informal Experience, Other Projects</h1>
-		<h3 class="ui title header">GBFRaiders</h3>
-		<div class="ui justified container">
-			One of my main projects these days is a website called GBF Raiders. It is a tool designed for players of the game <a href="http://game.granbluefantasy.jp/">Gran Blue Fantasy</a>, a cross-platform game popular in both Japan and America. This site allows
-			players to subscribe to and find "Raids" (player-made rooms that other players can join). The back-end is comprised of an Express server, Socket.io, and the Twitter streaming API. The front end is styled primarily with Semantic UI and is mostly standard
-			Javascript. The Twitter stream filters out all the raids that are defined in a JSON file and emits them to Socket.io rooms. Players can then subscribe or unsubscribe from those rooms to control which show up in the site. Selected raids are saved in
-			localstorage to survive refreshes. If the server or socket goes down, the site automatically re-subscribes to those rooms on reconnect. I have several thousand users a day and pay for the DigitalOcean server with donations. The site is hosted at
-			<a href="http://www.gbfraiders.com/">GBFRaiders.com</a> and it's <a href="https://github.com/ypinskiy/GBF-Raiders">GitHub</a> is public. Upon requests from my users, I have made a companion Chrome extension for this site, available at <a href="https://chrome.google.com/webstore/detail/gbf-raiders-2-the-chrome/jhdcbkpphfaclidacgbnnaphoilhgipm">the Chrome webstore</a>			and the code is also visible on <a href="https://github.com/ypinskiy/GBF-Raiders-Extension">GitHub</a>
-		</div>
-		<h3 class="ui title header">Kashtan Gifts</h3>
-		<div class="ui justified container">
-			This is a beta website that I made for a freelance client of mine. It is a shopping website similar to Etsy but specifically for her products. The backend is a Node.js server running the Express framework and HTML templating done in EJS. The mailing of
-			order forms and such is handled by the Mailgun API and credit card handling goes through Stripe. On the front end, it is just a simple Bootstrap implementation. This is hosted for now on Heroku before being moved to its own dedicated server in the
-			next major update in March 2018. The new site will be using Vue.js. <a href="http://www.kashtangifts.com">Here is a link to the beta site.</a>
-		</div>
-		<h3 class="ui title header">Temperature Dashboard</h3>
-		<div class="ui justified container">
-			As a part of an effort to incorporate more home automation into my house, I built a few temperature sensors using an ESP8266 Feather and a DHT22 and then placed them around the house and one outside. I then created a Node.js server that would collect
-			the readings from these remote sensors and store them as well as get the week's forecast and a feed from our security camera. It exposed a local dashboard that I set as the homepage on a bunch of tablets around the house. I am running the server on
-			a Raspberry Pi 3 that I made some custom case work for to increase cooling capabilites. The dashboard is made with CSS Grid and Socket.io.
-		</div>
-		<h3 class="ui title header">JS Canvas Games</h3>
-		<div class="ui justified container">
-			While I was learning Javascript, I created a series of games implemented in the HTML Canvas element. One game, Breakout, was created from a Mozilla Developer Network tutorial that I finished and then decided to expand with new assets and sounds. Here
-			is a link to a <a href="https://canvasgamesdemo.herokuapp.com/sites/breakout/index.html">demo of the game</a> and a link to the <a href="https://github.com/ypinskiy/CanvasExamples/tree/master/breakout">Github source</a> for it.
-			<br><br> The next canvas game I worked on was a match 3 puzzle game that I was inspired to make after my mother and sister got onto the Candy Crush fad. I created a few utility classes for this like the grid class that I still use for the games I am
-			working on now. Here is a link to a <a href="https://canvasgamesdemo.herokuapp.com/sites/match_3/match.html">demo of the game</a> and a link to the <a href="https://github.com/ypinskiy/CanvasExamples/tree/master/match_3">Github source</a> for it.
-			<br><br> The turret defense game was the first full game that I tried to make, as well as the one that took the longest to make. I learned quite a few techniques on this project such as pathfinding and making sprites rotate to face points. Here is
-			a link to a <a href="https://canvasgamesdemo.herokuapp.com/sites/turret_defense/turret.html">demo of the game</a> and a link to the <a href="https://github.com/ypinskiy/CanvasExamples/tree/master/turret_defense">Github source</a> for it.</div>
-	</div>
+	</footer>
 </body>
 
 </html>
